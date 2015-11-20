@@ -1,0 +1,4 @@
+exclude: [reference]
+
+# Build settings
+markdown: kramdown
