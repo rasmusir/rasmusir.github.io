@@ -5,20 +5,109 @@ html,body
     height: 100%;
     width: 100%;
     font-family: $font-base;
+    color: $c-text;
 }
 
 #wrapper
 {
     min-height: 100%;
     width: 100%;
-    padding-top: 12px;
+    padding-top: 10px;
     box-sizing: border-box;
 }
 
 #nav
 {
+    position: relative;
     width: 100%;
     background: $c-cloud;
-    height: 45px;
-    margin-bottom: 30px;
+    height: 50px;
+    margin-bottom: 80px;
+    overflow: hidden;
+    
+    div
+    {
+        width: 900px;
+        display: flex;
+        justify-content:center;
+        margin: 0 auto;
+    }
+    
+    a
+    {
+        font-weight: bold;
+        font-size: 1.5em;
+        position: relative;
+        height: 50px;
+        width: 160px;
+        text-align: center;
+        color: #aaa;
+        cursor: pointer;
+        line-height: 50px;
+        
+        &:before
+        {
+            position: absolute;
+            content: "";
+            width: 0%;
+            left: 50%;
+            top: 50%;
+            height: 0%;
+            display: block;
+            border-radius: 100%;
+            background: rgba(0,0,0,0.05);
+            transition:  opacity 0.3s, width 0.3s step-end, height 0.3s step-end;
+            transform: translate(-50%,-50%);
+            opacity: 0;
+            z-index: 2;
+            pointer-events: none;
+        }
+        
+        &:after
+        {
+            position: absolute;
+            content: attr(name);
+            z-index: 3;
+            text-align: center;
+            width: 100%;
+            lefT: 0;
+            opacity: 0;
+            color: white;
+            transition:  opacity 0.3s;
+        }
+        
+        &:hover:before
+        {
+            opacity: 1;
+            width: 170px;
+            height: 170px;
+            transition: all 0.2s;
+        }
+        
+        &:hover:after
+        {
+            opacity: 1;
+        }
+    }
+    
+    a[name="Me"]:before
+    {
+        background: $c-me;
+    }
+    
+    a[name="Code"]:before
+    {
+        background: $c-code;
+    }
+    
+    a[name="Stuff"]:before
+    {
+        background: $c-stuff;
+    }
+    
+    a[name="Blog"]:before
+    {
+        background: $c-blog;
+    }
+        
 }
