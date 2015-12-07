@@ -1,6 +1,7 @@
 exclude: [reference]
 
 title: Rasmus Israelsson
+source: src
 
 # Build settings
 markdown: kramdown
