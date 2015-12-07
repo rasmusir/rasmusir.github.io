@@ -1,4 +1,9 @@
 #wrapper.index
 {
-    background-color: $c-index;
+    background-color: $c-me;
+}
+#wrapper.index ::selection
+{
+    background: rgba(255,255,255,1);
+    color: black;
 }
