@@ -2,8 +2,7 @@
 {
     background-color: $c-me;
 }
-#wrapper.index ::selection
+#wrapper.blog
 {
-    background: rgba(255,255,255,1);
-    color: black;
+    background-color: $c-blog;
 }
