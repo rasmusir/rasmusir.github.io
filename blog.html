@@ -2,17 +2,20 @@
 layout: default
 page: blog
 theme: e74c3c
+theme: 3d566e
 ---
 <div class="card">
     {% for post in site.posts limit:1 %}
-    <h2>{{ post.title }}</h2>
-{% endfor %}
+        <h2>{{ post.title }}</h2>
+        <a href="{{ post.url }}">Go to comments</a>
+    {% endfor %}
 </div>
 
 <div class="card">
 {% for post in site.posts offset:1 %}
     <h2>{{ post.title }}</h2>
     {{ post.content }}
+    <a href="{{ post.url }}">Go to comments</a>
     <hr>
 {% endfor %}
 </div>

@@ -12,31 +12,36 @@ html,body
 {
     min-height: 100%;
     width: 100%;
-    padding-top: 10px;
+    padding-top: 20px;
     box-sizing: border-box;
-}
-
-#wrapper #content
-{
-    padding-left: 5px;
-    padding-right: 5px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 #nav
 {
     position: relative;
+    margin: auto;
     max-width: 100%;
-    background: $c-cloud;
+    width: 1000px;
     height: 50px;
-    margin-bottom: 80px;
-    overflow: hidden;
+    margin-bottom: 20px;
+    overflow: hidden; 
+    box-sizing: border-box;
     
     div
     {
-        max-width: 900px;
+        background: $c-cloud;
+        max-width: 1000px;
+        height: 50px;
         display: flex;
         justify-content:center;
         margin: 0 auto;
+        border-bottom: 1px solid rgba(0,0,0,0.35);
+        border-top: 1px solid white;
+        border-radius: 3px;
+        box-sizing: border-box;
     }
     
     a
@@ -61,7 +66,7 @@ html,body
             top: 50%;
             height: 0%;
             display: block;
-            border-radius: 100%;
+            border-radius: 50%;
             background: rgba(0,0,0,0.05);
             transition:  opacity 0.3s, width 0.3s step-end, height 0.3s step-end;
             transform: translate(-50%,-50%);

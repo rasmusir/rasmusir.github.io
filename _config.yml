@@ -2,5 +2,7 @@ exclude: [reference]
 
 title: Rasmus Israelsson
 
+permalink: pretty
+
 # Build settings
 markdown: kramdown
