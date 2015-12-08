@@ -1,3 +1,5 @@
+<img src="css/bild.jpg" class="circle floatRight" style="height: 200px; width: 200px;">
+
 # Who am I?
 
 My name is Rasmus Israelsson, both born and raised in Sweden.
