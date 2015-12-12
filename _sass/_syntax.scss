@@ -5,7 +5,9 @@
     position: relative;
     background: rgba(255,255,255,0.3);
     padding: 5px;
-    overflow-x: auto;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    
     &:before
     {
         content: "";
@@ -17,6 +19,39 @@
         width: 100%;
         height: 90%;
         border-top: 1px solid white;
+    }
+    &:after
+    {
+        content: "Click to expand";
+        font-family: monospace;
+        position: absolute;
+        top: 100%;
+        margin-top: 1px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: block;
+        background: #fafafa;
+        border-radius: 10px;
+        border-top-left-radius: 0px;
+        border-top-right-radius: 0px;
+        background: rgba(255,255,255,0.3);
+        border-bottom: 1px solid rgba(0,0,0,0.1);
+        color: rgba(0,0,0,0.3);
+        padding: 3px;
+        opacity: 0;
+        transition: opacity 0.5s;
+    }
+    
+    &[folded="true"]:after
+    {
+        opacity: 1;
+    }
+    
+    pre
+    {
+        transition: height 0.5s;
+        margin: 0px;
+        overflow-y: hidden;
     }
 }
 .highlight .c { color: #999988; font-style: italic } /* Comment */
@@ -80,6 +115,14 @@
 .highlight .il { color: #009999 } /* Literal.Number.Integer.Long */
 
 /* Make line numbers unselectable: excludes line numbers from copy-paste user ops */
-.highlight .lineno {-webkit-user-select: none;-moz-user-select: none; -o-user-select: none;} 
+.highlight .lineno {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    color: rgba(0,0,0,0.3);
+    border-right: 1px solid rgba(0,0,0,0.1);
+    padding-right: 3px;
+} 
 .lineno::-moz-selection {background-color: transparent;} /* Mozilla specific */
 .lineno::selection {background-color: transparent;} /* Other major browsers */
