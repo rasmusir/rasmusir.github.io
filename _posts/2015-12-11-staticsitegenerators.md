@@ -2,6 +2,7 @@
 title: "Static Site Generators"
 date: 2015-12-11 22:14:00
 layout: blog
+published: false
 
 ---
 Sometimes you just want to create a portfolio or maybe just a blog, and you feel (like any reasonable person)

@@ -1,0 +1,14 @@
+/* TEAM */
+Your title: Rasmus Israelsson
+Site: IsraelssonRasmusRaz@gmail.com
+Twitter: rasmusir
+Youtube: https://www.youtube.com/user/UltimateWire
+Location: Kalmar, Sweden.
+
+/* THANKS */
+
+/* SITE */
+Last update: 2016/01/07
+Standards: HTML5, CSS3, JavaScript (ECMAScript 5.1)
+Components: Jekyll, SASS
+Software: Vagrant, Jekyll, Brackets, Git(Hub)
